@@ -8,6 +8,8 @@
 
 <html lang="ja"
   
+    mode="dark"
+  
 >
 
   <!--
@@ -32,15 +34,15 @@
 
   
 
-  <!-- Begin Jekyll SEO tag v2.7.1 -->
-<meta name="generator" content="Jekyll v4.2.1" />
+  <!-- Begin Jekyll SEO tag v2.8.0 -->
+<meta name="generator" content="Jekyll v4.2.2" />
 <meta property="og:title" content="Getting Started" />
 <meta name="author" content="Cotes Chung" />
 <meta property="og:locale" content="ja" />
 <meta name="description" content="Prerequisites" />
 <meta property="og:description" content="Prerequisites" />
-<link rel="canonical" href="/posts/getting-started/" />
-<meta property="og:url" content="/posts/getting-started/" />
+<link rel="canonical" href="https://mlf.f5.si/posts/getting-started/" />
+<meta property="og:url" content="https://mlf.f5.si/posts/getting-started/" />
 <meta property="og:site_name" content="Morlef" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2019-08-09T21:55:00+09:00" />
@@ -50,7 +52,7 @@
 <meta name="twitter:creator" content="@Cotes Chung" />
 <meta name="google-site-verification" content="google_meta_tag_verification" />
 <script type="application/ld+json">
-{"description":"Prerequisites","headline":"Getting Started","dateModified":"2019-08-09T21:55:00+09:00","datePublished":"2019-08-09T21:55:00+09:00","url":"/posts/getting-started/","mainEntityOfPage":{"@type":"WebPage","@id":"/posts/getting-started/"},"author":{"@type":"Person","name":"Cotes Chung"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Cotes Chung"},"dateModified":"2019-08-09T21:55:00+09:00","datePublished":"2019-08-09T21:55:00+09:00","description":"Prerequisites","headline":"Getting Started","mainEntityOfPage":{"@type":"WebPage","@id":"https://mlf.f5.si/posts/getting-started/"},"url":"https://mlf.f5.si/posts/getting-started/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -116,136 +118,6 @@
 
 </head>
 
-
-  
-    <!--
-  Switch the mode between dark and light.
--->
-
-<script type="text/javascript">
-  class ModeToggle {
-    static get MODE_KEY() { return "mode"; }
-    static get DARK_MODE() { return "dark"; }
-    static get LIGHT_MODE() { return "light"; }
-    static get ID() { return "mode-toggle"; }
-
-    constructor() {
-      if (this.hasMode) {
-        if (this.isDarkMode) {
-          if (!this.isSysDarkPrefer) {
-            this.setDark();
-          }
-        } else {
-          if (this.isSysDarkPrefer) {
-            this.setLight();
-          }
-        }
-      }
-
-      let self = this;
-
-      /* always follow the system prefers */
-      this.sysDarkPrefers.addEventListener("change", () => {
-        if (self.hasMode) {
-          if (self.isDarkMode) {
-            if (!self.isSysDarkPrefer) {
-              self.setDark();
-            }
-
-          } else {
-            if (self.isSysDarkPrefer) {
-              self.setLight();
-            }
-          }
-
-          self.clearMode();
-        }
-
-        self.notify();
-
-      });
-
-    } /* constructor() */
-
-    get sysDarkPrefers() { return window.matchMedia("(prefers-color-scheme: dark)"); }
-
-    get isSysDarkPrefer() { return this.sysDarkPrefers.matches; }
-
-    get isDarkMode() { return this.mode === ModeToggle.DARK_MODE; }
-
-    get isLightMode() { return this.mode === ModeToggle.LIGHT_MODE; }
-
-    get hasMode() { return this.mode != null; }
-
-    get mode() { return sessionStorage.getItem(ModeToggle.MODE_KEY); }
-
-    /* get the current mode on screen */
-    get modeStatus() {
-      if (this.isDarkMode
-        || (!this.hasMode && this.isSysDarkPrefer)) {
-        return ModeToggle.DARK_MODE;
-      } else {
-        return ModeToggle.LIGHT_MODE;
-      }
-    }
-
-    setDark() {
-      $('html').attr(ModeToggle.MODE_KEY, ModeToggle.DARK_MODE);
-      sessionStorage.setItem(ModeToggle.MODE_KEY, ModeToggle.DARK_MODE);
-    }
-
-    setLight() {
-      $('html').attr(ModeToggle.MODE_KEY, ModeToggle.LIGHT_MODE);
-      sessionStorage.setItem(ModeToggle.MODE_KEY, ModeToggle.LIGHT_MODE);
-    }
-
-    clearMode() {
-      $('html').removeAttr(ModeToggle.MODE_KEY);
-      sessionStorage.removeItem(ModeToggle.MODE_KEY);
-    }
-
-    /* Notify another plugins that the theme mode has changed */
-    notify() {
-      window.postMessage({
-        direction: ModeToggle.ID,
-        message: this.modeStatus
-      }, "*");
-    }
-
-  } /* ModeToggle */
-
-  const toggle = new ModeToggle();
-
-  function flipMode() {
-    if (toggle.hasMode) {
-      if (toggle.isSysDarkPrefer) {
-        if (toggle.isLightMode) {
-          toggle.clearMode();
-        } else {
-          toggle.setLight();
-        }
-
-      } else {
-        if (toggle.isDarkMode) {
-          toggle.clearMode();
-        } else {
-          toggle.setDark();
-        }
-      }
-
-    } else {
-      if (toggle.isSysDarkPrefer) {
-        toggle.setLight();
-      } else {
-        toggle.setDark();
-      }
-    }
-
-    toggle.notify();
-
-  } /* flipMode() */
-
-</script>
 
   
 
@@ -325,14 +197,6 @@
 
   <div class="sidebar-bottom mt-auto d-flex flex-wrap justify-content-center align-items-center">
 
-    
-      <button class="mode-toggle btn" aria-label="Switch Mode">
-        <i class="fas fa-adjust"></i>
-      </button>
-
-      
-        <span class="icon-border"></span>
-      
     
 
     
@@ -977,10 +841,10 @@
 3
 4
 </pre></td><td class="rouge-code"><pre><span class="gp">$</span><span class="w"> </span>docker run <span class="nt">-it</span> <span class="nt">--rm</span> <span class="se">\</span>
-    <span class="nt">--volume</span><span class="o">=</span><span class="s2">"</span><span class="nv">$PWD</span><span class="s2">:/srv/jekyll"</span> <span class="se">\</span>
-    <span class="nt">-p</span> 4000:4000 jekyll/jekyll <span class="se">\</span>
+<span class="gp">    --volume="$</span>PWD:/srv/jekyll<span class="s2">" </span><span class="se">\</span><span class="s2">
+</span><span class="go">    -p 4000:4000 jekyll/jekyll \
     jekyll serve
-</pre></td></tr></tbody></table></code></div></div>
+</span></pre></td></tr></tbody></table></code></div></div>
 
 <p>After a while, the local service will be published at <em><a href="http://127.0.0.1:4000">http://127.0.0.1:4000</a></em>.</p>
 
@@ -1054,11 +918,11 @@
 4
 5
 </pre></td><td class="rouge-code"><pre><span class="gp">$</span><span class="w"> </span>docker run <span class="nt">-it</span> <span class="nt">--rm</span> <span class="se">\</span>
-    <span class="nt">--env</span> <span class="nv">JEKYLL_ENV</span><span class="o">=</span>production <span class="se">\</span>
-    <span class="nt">--volume</span><span class="o">=</span><span class="s2">"</span><span class="nv">$PWD</span><span class="s2">:/srv/jekyll"</span> <span class="se">\</span>
-    jekyll/jekyll <span class="se">\</span>
+<span class="go">    --env JEKYLL_ENV=production \
+</span><span class="gp">    --volume="$</span>PWD:/srv/jekyll<span class="s2">" </span><span class="se">\</span><span class="s2">
+</span><span class="go">    jekyll/jekyll \
     jekyll build
-</pre></td></tr></tbody></table></code></div></div>
+</span></pre></td></tr></tbody></table></code></div></div>
 
 <p>Unless you specified the output path, the generated site files will be placed in folder <code class="language-plaintext highlighter-rouge">_site</code> of the project’s root directory. Now you should upload those files to the target server.</p>
 
@@ -1149,19 +1013,19 @@ The merge is likely to conflict with your local modifications. Please be patient
 
     
       
-        <a href="https://twitter.com/intent/tweet?text=Getting Started - Morlef&url=/posts/getting-started/" data-toggle="tooltip" data-placement="top"
+        <a href="https://twitter.com/intent/tweet?text=Getting Started - Morlef&url=https://mlf.f5.si/posts/getting-started/" data-toggle="tooltip" data-placement="top"
           title="Twitter" target="_blank" rel="noopener" aria-label="Twitter">
           <i class="fa-fw fab fa-twitter"></i>
         </a>
     
       
-        <a href="https://www.facebook.com/sharer/sharer.php?title=Getting Started - Morlef&u=/posts/getting-started/" data-toggle="tooltip" data-placement="top"
+        <a href="https://www.facebook.com/sharer/sharer.php?title=Getting Started - Morlef&u=https://mlf.f5.si/posts/getting-started/" data-toggle="tooltip" data-placement="top"
           title="Facebook" target="_blank" rel="noopener" aria-label="Facebook">
           <i class="fa-fw fab fa-facebook-square"></i>
         </a>
     
       
-        <a href="https://telegram.me/share?text=Getting Started - Morlef&url=/posts/getting-started/" data-toggle="tooltip" data-placement="top"
+        <a href="https://telegram.me/share?text=Getting Started - Morlef&url=https://mlf.f5.si/posts/getting-started/" data-toggle="tooltip" data-placement="top"
           title="Telegram" target="_blank" rel="noopener" aria-label="Telegram">
           <i class="fa-fw fab fa-telegram"></i>
         </a>
@@ -1619,7 +1483,7 @@ The merge is likely to conflict with your local modifications. Please be patient
 
 <em class="timeago small"
     date="2021-01-04 08:32:00 +0900"
-    >Jan  4</em>
+    >Jan  4, 2021</em>
 
             <h3 class="pt-0 mt-1 mb-3" data-toc-skip>Enable Google Page Views</h3>
             <div class="text-muted small">
@@ -1687,7 +1551,7 @@ The merge is likely to conflict with your local modifications. Please be patient
   <div class="d-flex justify-content-between align-items-center text-muted">
     <div class="footer-left">
       <p class="mb-0">
-        © 2021
+        © 2022
         <a href="https://twitter.com/luna_runtime">Morlef</a>.
         
         <span data-toggle="tooltip" data-placement="top"
