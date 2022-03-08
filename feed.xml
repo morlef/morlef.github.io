@@ -4,7 +4,7 @@
   <id>https://mlf.f5.si/</id>
   <title>Morlef</title>
   <subtitle>適当に作っています</subtitle>
-  <updated>2022-03-08T09:52:36+09:00</updated>
+  <updated>2022-03-08T10:07:18+09:00</updated>
   <author>
     <name>Morlef</name>
     <uri>https://mlf.f5.si/</uri>
@@ -21,22 +21,20 @@
   
   <entry>
     <title>Enable Google Page Views</title>
-    <link href="https://mlf.f5.si/posts/enable-google-pv/" rel="alternate" type="text/html" title="Enable Google Page Views" />
+    <link href="https://mlf.f5.si/posts/test/" rel="alternate" type="text/html" title="Enable Google Page Views" />
     <published>2021-01-04T08:32:00+09:00</published>
   
     <updated>2021-01-04T08:32:00+09:00</updated>
   
-    <id>https://mlf.f5.si/posts/enable-google-pv/</id>
-    <content src="https://mlf.f5.si/posts/enable-google-pv/" />
+    <id>https://mlf.f5.si/posts/test/</id>
+    <content src="https://mlf.f5.si/posts/test/" />
     <author>
-      <name>{"name"=>"Dinesh Prasanth Moluguwan Krishnamoorthy", "link"=>"https://github.com/SilleBille"}</name>
+      <name>{"name"=>"morlef"}</name>
     </author>
 
   
     
     <category term="Blogging" />
-    
-    <category term="Tutorial" />
     
   
 
@@ -48,199 +46,17 @@
 
 
 
-      This post is to enable Page Views on the Chirpy theme based blog that you just built. This requires technical knowledge and it’s recommended to keep the google_analytics.pv.* empty unless you have a good reason. If your website has low traffic, the page views count would discourage you to write more blogs. With that said, let’s start with the setup.
+      テスト投稿
 
-Set up Google Analytics
+これはテスト投稿です。
 
-Create GA account a...
-    </summary>
-  
-
-  </entry>
-
-  
-  <entry>
-    <title>Customize the Favicon</title>
-    <link href="https://mlf.f5.si/posts/customize-the-favicon/" rel="alternate" type="text/html" title="Customize the Favicon" />
-    <published>2019-08-11T01:34:00+09:00</published>
-  
-    <updated>2019-08-11T01:34:00+09:00</updated>
-  
-    <id>https://mlf.f5.si/posts/customize-the-favicon/</id>
-    <content src="https://mlf.f5.si/posts/customize-the-favicon/" />
-    <author>
-      <name>{"name"=>"Cotes Chung", "link"=>"https://github.com/cotes2020"}</name>
-    </author>
-
-  
-    
-    <category term="Blogging" />
-    
-    <category term="Tutorial" />
-    
-  
-
-  
-    <summary>
-      
+public class Test {
+    public static void main(String[] args) {
+        System.out.println("Hello world!")
+    }
+}
 
 
-
-
-
-      The favicons of Chirpy are placed in the directory assets/img/favicons/. You may want to replace them with your own. The following sections will guide you to create and replace the default favicons.
-
-Generate the favicon
-
-Prepare a square image (PNG, JPG, or SVG) with a size of 512x512 or more, and then go to the online tool Real Favicon Generator and click the button Select your Favicon image ...
-    </summary>
-  
-
-  </entry>
-
-  
-  <entry>
-    <title>Getting Started</title>
-    <link href="https://mlf.f5.si/posts/getting-started/" rel="alternate" type="text/html" title="Getting Started" />
-    <published>2019-08-09T21:55:00+09:00</published>
-  
-    <updated>2019-08-09T21:55:00+09:00</updated>
-  
-    <id>https://mlf.f5.si/posts/getting-started/</id>
-    <content src="https://mlf.f5.si/posts/getting-started/" />
-    <author>
-      <name>{"name"=>"Cotes Chung", "link"=>"https://github.com/cotes2020"}</name>
-    </author>
-
-  
-    
-    <category term="Blogging" />
-    
-    <category term="Tutorial" />
-    
-  
-
-  
-    <summary>
-      
-
-
-
-
-
-      Prerequisites
-
-Follow the instructions in the Jekyll Docs to complete the installation of Ruby, RubyGems, Jekyll, and Bundler.
-
-Installation
-
-Creating a New Site
-
-There are two ways to create a new repository for this theme:
-
-
-  Using the Chirpy Starter - Easy to upgrade, isolates irrelevant project files so you can focus on writing.
-  Forking on GitHub - Convenient for custom development, but ...
-    </summary>
-  
-
-  </entry>
-
-  
-  <entry>
-    <title>Writing a New Post</title>
-    <link href="https://mlf.f5.si/posts/write-a-new-post/" rel="alternate" type="text/html" title="Writing a New Post" />
-    <published>2019-08-08T15:10:00+09:00</published>
-  
-    <updated>2019-08-08T15:10:00+09:00</updated>
-  
-    <id>https://mlf.f5.si/posts/write-a-new-post/</id>
-    <content src="https://mlf.f5.si/posts/write-a-new-post/" />
-    <author>
-      <name>{"name"=>"Cotes Chung", "link"=>"https://github.com/cotes2020"}</name>
-    </author>
-
-  
-    
-    <category term="Blogging" />
-    
-    <category term="Tutorial" />
-    
-  
-
-  
-    <summary>
-      
-
-
-
-
-
-      This post will guide you how to write a post on Chirpy theme. Even if you have previous experience with Jekyll, this article is worth reading, because many features require specific variables to be set.
-
-Naming and Path
-
-Create a new file named YYYY-MM-DD-TITLE.EXTENSION and put it in the _posts of the root directory. Please note that the EXTENSION must be one of md and markdown. If you want to...
-    </summary>
-  
-
-  </entry>
-
-  
-  <entry>
-    <title>Text and Typography</title>
-    <link href="https://mlf.f5.si/posts/text-and-typography/" rel="alternate" type="text/html" title="Text and Typography" />
-    <published>2019-08-08T12:33:00+09:00</published>
-  
-    <updated>2019-08-08T12:33:00+09:00</updated>
-  
-    <id>https://mlf.f5.si/posts/text-and-typography/</id>
-    <content src="https://mlf.f5.si/posts/text-and-typography/" />
-    <author>
-      <name>{"name"=>"Cotes Chung", "link"=>"https://github.com/cotes2020"}</name>
-    </author>
-
-  
-    
-    <category term="Blogging" />
-    
-    <category term="Demo" />
-    
-  
-
-  
-    <summary>
-      
-
-
-
-
-
-      This post is to show Markdown syntax rendering on Chirpy, you can also use it as an example of writing. Now, let’s start looking at text and typography.
-
-Titles
-
-H1 - heading
-
-H2 - heading
-
-H3 - heading
-
-H4 - heading
-
-
-
-Paragraph
-
-I wandered lonely as a cloud
-
-That floats on high o’er vales and hills,
-
-When all at once I saw a crowd,
-
-A host, of golden daffodils;
-
-Beside the lake, beneath the t...
     </summary>
   
 
