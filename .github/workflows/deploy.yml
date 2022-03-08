@@ -22,6 +22,8 @@ jobs:
           bundle exec jekyll build
       - name: nojekyll
         run: touch .nojekyll
+      - name: cname
+        run: cp ./assets/CNAME ./_site/CNAME
       - uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
